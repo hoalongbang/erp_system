@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1307</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Hệ thống ERP</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QToolBox" name="toolBoxMainNavigation">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <!-- File Management Page -->
+      <widget class="QWidget" name="pageFile">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>127</width>
+         <height>466</height>
+        </rect>
+       </property>
+       <property name="windowTitle">
+        <string>Tệp</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_File">
+        <item>
+         <widget class="QPushButton" name="btnFileLogout">
+          <property name="text">
+           <string>Đăng xuất</string>
+          </property>
+          <property name="toolTip">
+           <string>Đăng xuất khỏi hệ thống</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_File">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <!-- Manage Module Page -->
+      <widget class="QWidget" name="pageManage">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>127</width>
+         <height>466</height>
+        </rect>
+       </property>
+       <property name="windowTitle">
+        <string>Quản lý</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_Manage">
+        <item>
+         <widget class="QPushButton" name="btnManageCategories">
+          <property name="text">
+           <string>Danh mục</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageProducts">
+          <property name="text">
+           <string>Sản phẩm</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageCustomers">
+          <property name="text">
+           <string>Khách hàng</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageSuppliers">
+          <property name="text">
+           <string>Nhà cung cấp</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageUsers">
+          <property name="text">
+           <string>Người dùng</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageWarehouses">
+          <property name="text">
+           <string>Kho hàng</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageLocations">
+          <property name="text">
+           <string>Vị trí</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageUnitsOfMeasure">
+          <property name="text">
+           <string>Đơn vị đo</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageRoles">
+          <property name="text">
+           <string>Vai trò</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManagePermissions">
+          <property name="text">
+           <string>Quyền hạn</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Manage">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <!-- Sales Module Page -->
+      <widget class="QWidget" name="pageSales">
+       <property name="windowTitle">
+        <string>Bán hàng</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_Sales">
+        <item>
+         <widget class="QPushButton" name="btnManageSalesOrders">
+          <property name="text">
+           <string>Đơn hàng bán</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageInvoices">
+          <property name="text">
+           <string>Hóa đơn</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManagePayments">
+          <property name="text">
+           <string>Thanh toán</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageQuotations">
+          <property name="text">
+           <string>Báo giá</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageShipments">
+          <property name="text">
+           <string>Vận chuyển</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageReturns">
+          <property name="text">
+           <string>Trả hàng</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Sales">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <!-- Manufacturing Module Page -->
+      <widget class="QWidget" name="pageManufacturing">
+       <property name="windowTitle">
+        <string>Sản xuất</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_Manufacturing">
+        <item>
+         <widget class="QPushButton" name="btnManageBillOfMaterials">
+          <property name="text">
+           <string>Định mức NVL</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageMaintenance">
+          <property name="text">
+           <string>Bảo trì</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageProductionLines">
+          <property name="text">
+           <string>Dây chuyền SX</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageProductionOrders">
+          <property name="text">
+           <string>Lệnh sản xuất</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Manufacturing">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <!-- Material Module Page -->
+      <widget class="QWidget" name="pageMaterial">
+       <property name="windowTitle">
+        <string>Vật tư</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_Material">
+        <item>
+         <widget class="QPushButton" name="btnManageReceiptSlips">
+          <property name="text">
+           <string>Phiếu nhập kho</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageIssueSlips">
+          <property name="text">
+           <string>Phiếu xuất kho</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageMaterialRequests">
+          <property name="text">
+           <string>Yêu cầu vật tư</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageMaterialIssueSlips">
+          <property name="text">
+           <string>Phiếu xuất vật tư SX</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Material">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <!-- Warehouse Module Page -->
+      <widget class="QWidget" name="pageWarehouse">
+       <property name="windowTitle">
+        <string>Kho hàng</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_Warehouse">
+        <item>
+         <widget class="QPushButton" name="btnManageInventory">
+          <property name="text">
+           <string>Tồn kho</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManagePickingRequests">
+          <property name="text">
+           <string>Yêu cầu lấy hàng</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageStocktakeRequests">
+          <property name="text">
+           <string>Yêu cầu kiểm kê</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnViewInventoryTransactions">
+          <property name="text">
+           <string>Giao dịch tồn kho</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Warehouse">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <!-- Finance Module Page -->
+      <widget class="QWidget" name="pageFinance">
+       <property name="windowTitle">
+        <string>Tài chính</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_Finance">
+        <item>
+         <widget class="QPushButton" name="btnManageAccountReceivable">
+          <property name="text">
+           <string>Công nợ phải thu</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageGeneralLedger">
+          <property name="text">
+           <string>Sổ cái chung</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageTaxRates">
+          <property name="text">
+           <string>Thuế suất</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnViewFinancialReports">
+          <property name="text">
+           <string>Báo cáo Tài chính</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Finance">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <!-- Integration Module Page -->
+      <widget class="QWidget" name="pageIntegration">
+       <property name="windowTitle">
+        <string>Tích hợp</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_Integration">
+        <item>
+         <widget class="QPushButton" name="btnManageDeviceManagement">
+          <property name="text">
+           <string>Quản lý thiết bị</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageExternalSystems">
+          <property name="text">
+           <string>Hệ thống bên ngoài</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Integration">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <!-- Notification Module Page -->
+      <widget class="QWidget" name="pageNotification">
+       <property name="windowTitle">
+        <string>Thông báo</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_Notification">
+        <item>
+         <widget class="QPushButton" name="btnManageNotifications">
+          <property name="text">
+           <string>Thông báo</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Notification">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <!-- Report Module Page -->
+      <widget class="QWidget" name="pageReport">
+       <property name="windowTitle">
+        <string>Báo cáo</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_Report">
+        <item>
+         <widget class="QPushButton" name="btnManageReports">
+          <property name="text">
+           <string>Báo cáo</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Report">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <!-- Scheduler Module Page -->
+      <widget class="QWidget" name="pageScheduler">
+       <property name="windowTitle">
+        <string>Lịch trình</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_Scheduler">
+        <item>
+         <widget class="QPushButton" name="btnManageScheduledTasks">
+          <property name="text">
+           <string>Tác vụ được lên lịch</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnViewTaskExecutionLogs">
+          <property name="text">
+           <string>Nhật ký thực thi tác vụ</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Scheduler">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <!-- Security Module Page -->
+      <widget class="QWidget" name="pageSecurity">
+       <property name="windowTitle">
+        <string>Bảo mật</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_Security">
+        <item>
+         <widget class="QPushButton" name="btnViewAuditLogs">
+          <property name="text">
+           <string>Nhật ký kiểm toán</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnManageSessions">
+          <property name="text">
+           <string>Phiên đăng nhập</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Security">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <!-- Help Module Page -->
+      <widget class="QWidget" name="pageHelp">
+       <property name="windowTitle">
+        <string>Trợ giúp</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_Help">
+        <item>
+         <widget class="QPushButton" name="btnHelpAbout">
+          <property name="text">
+           <string>Về chúng tôi</string>
+          </property>
+          <property name="flat">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_Help">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QStatusBar" name="statusbar"/>
+  <!-- QAction definitions (these are actions, not widgets, defined globally) -->
+  <action name="actionLogout">
+   <property name="icon">
+    <iconset theme="system-log-out"/>
+   </property>
+   <property name="text">
+    <string>Đăng xuất</string>
+   </property>
+  </action>
+  <action name="actionManageCategories">
+   <property name="text">
+    <string>Danh mục</string>
+   </property>
+  </action>
+  <action name="actionManageProducts">
+   <property name="text">
+    <string>Sản phẩm</string>
+   </property>
+  </action>
+  <action name="actionManageCustomers">
+   <property name="text">
+    <string>Khách hàng</string>
+   </property>
+  </action>
+  <action name="actionManageSuppliers">
+   <property name="text">
+    <string>Nhà cung cấp</string>
+   </property>
+  </action>
+  <action name="actionManageWarehouses">
+   <property name="text">
+    <string>Kho hàng</string>
+   </property>
+  </action>
+  <action name="actionManageLocations">
+   <property name="text">
+    <string>Vị trí</string>
+   </property>
+  </action>
+  <action name="actionManageUnitsOfMeasure">
+   <property name="text">
+    <string>Đơn vị đo</string>
+   </property>
+  </action>
+  <action name="actionManageRoles">
+   <property name="text">
+    <string>Vai trò</string>
+   </property>
+  </action>
+  <action name="actionManagePermissions">
+   <property name="text">
+    <string>Quyền hạn</string>
+   </property>
+  </action>
+  <action name="actionManageSalesOrders">
+   <property name="text">
+    <string>Đơn hàng bán</string>
+   </property>
+  </action>
+  <action name="actionManageInvoices">
+   <property name="text">
+    <string>Hóa đơn</string>
+   </property>
+  </action>
+  <action name="actionManagePayments">
+   <property name="text">
+    <string>Thanh toán</string>
+   </property>
+  </action>
+  <action name="actionManageQuotations">
+   <property name="text">
+    <string>Báo giá</string>
+   </property>
+  </action>
+  <action name="actionManageShipments">
+   <property name="text">
+    <string>Vận chuyển</string>
+   </property>
+  </action>
+  <action name="actionManageReturns">
+   <property name="text">
+    <string>Trả hàng</string>
+   </property>
+  </action>
+  <action name="actionManageBillOfMaterials">
+   <property name="text">
+    <string>Định mức nguyên vật liệu</string>
+   </property>
+  </action>
+  <action name="actionManageMaintenance">
+   <property name="text">
+    <string>Bảo trì</string>
+   </property>
+  </action>
+  <action name="actionManageProductionLines">
+   <property name="text">
+    <string>Dây chuyền sản xuất</string>
+   </property>
+  </action>
+  <action name="actionManageProductionOrders">
+   <property name="text">
+    <string>Lệnh sản xuất</string>
+   </property>
+  </action>
+  <action name="actionManageReceiptSlips">
+   <property name="text">
+    <string>Phiếu nhập kho</string>
+   </property>
+  </action>
+  <action name="actionManageIssueSlips">
+   <property name="text">
+    <string>Phiếu xuất kho</string>
+   </property>
+  </action>
+  <action name="actionManageMaterialRequests">
+   <property name="text">
+    <string>Yêu cầu vật tư</string>
+   </property>
+  </action>
+  <action name="actionManageMaterialIssueSlips">
+   <property name="text">
+    <string>Phiếu xuất vật tư sản xuất</string>
+   </property>
+  </action>
+  <action name="actionManageInventory">
+   <property name="text">
+    <string>Tồn kho</string>
+   </property>
+  </action>
+  <action name="actionManagePickingRequests">
+   <property name="text">
+    <string>Yêu cầu lấy hàng</string>
+   </property>
+  </action>
+  <action name="actionManageStocktakeRequests">
+   <property name="text">
+    <string>Yêu cầu kiểm kê</string>
+   </property>
+  </action>
+  <action name="actionViewInventoryTransactions">
+   <property name="text">
+    <string>Giao dịch Tồn kho</string>
+   </property>
+  </action>
+  <action name="actionManageAccountReceivable">
+   <property name="text">
+    <string>Công nợ phải thu</string>
+   </property>
+  </action>
+  <action name="actionManageGeneralLedger">
+   <property name="text">
+    <string>Sổ cái chung</string>
+   </property>
+  </action>
+  <action name="actionManageTaxRates">
+   <property name="text">
+    <string>Thuế suất</string>
+   </property>
+  </action>
+  <action name="actionViewFinancialReports">
+   <property name="text">
+    <string>Báo cáo Tài chính</string>
+   </property>
+  </action>
+  <action name="actionManageDeviceManagement">
+   <property name="text">
+    <string>Quản lý thiết bị</string>
+   </property>
+  </action>
+  <action name="actionManageExternalSystems">
+   <property name="text">
+    <string>Hệ thống bên ngoài</string>
+   </property>
+  </action>
+  <action name="actionManageNotifications">
+   <property name="text">
+    <string>Thông báo</string>
+   </property>
+  </action>
+  <action name="actionManageReports">
+   <property name="text">
+    <string>Báo cáo</string>
+   </property>
+  </action>
+  <action name="actionManageScheduledTasks">
+   <property name="text">
+    <string>Tác vụ được lên lịch</string>
+   </property>
+  </action>
+  <action name="actionViewTaskExecutionLogs">
+   <property name="text">
+    <string>Nhật ký thực thi tác vụ</string>
+   </property>
+  </action>
+  <action name="actionViewAuditLogs">
+   <property name="text">
+    <string>Nhật ký kiểm toán</string>
+   </property>
+  </action>
+  <action name="actionManageSessions">
+   <property name="text">
+    <string>Phiên đăng nhập</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset theme="help-about"/>
+   </property>
+   <property name="text">
+    <string>Về chúng tôi</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
